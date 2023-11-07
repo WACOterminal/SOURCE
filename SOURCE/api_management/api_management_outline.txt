@@ -1,0 +1,56 @@
+api_management/
+│
+├── api_gateway/                                 # API gateway configurations
+│   ├── kong/                                    # Kong API gateway specific configurations
+│   │   ├── kong.conf                            # Configuration file for Kong
+│   │   ├── kong.yml                             # Declarative configuration for Kong
+│   │   └── plugins/                             # Kong plugins for additional functionalities
+│   ├── tyk/                                     # Tyk API gateway specific configurations
+│   │   ├── tyk.conf                             # Configuration file for Tyk
+│   │   └── apps/                                # Tyk API definitions and policies
+│   │       ├── api_definitions/                 # API definition files for Tyk
+│   │       └── policies.json                    # Policies for access control and rate limiting
+│   └── gateway_utils.py                         # Utility functions for API gateway operations
+│
+├── authentication/                              # Authentication modules and configurations
+│   ├── oauth/                                   # OAuth based authentication
+│   │   ├── oauth_config.yml                     # Configuration for OAuth providers
+│   │   └── oauth_clients.py                     # Client scripts for OAuth authentication
+│   ├── jwt/                                     # JWT based authentication
+│   │   ├── jwt_config.yml                       # Configuration for JWT creation and validation
+│   │   └── jwt_provider.py                      # Script for providing and validating JWTs
+│   └── api_keys/                                # API key management
+│       ├── api_key_generator.py                 # Script to generate API keys
+│       └── api_key_validator.py                 # Script to validate API keys
+│
+├── rate_limiting/                               # Rate limiting configurations and scripts
+│   ├── rate_limiter.py                          # Script for rate limiting API requests
+│   └── rate_limit_config.yml                    # Configuration for rate limiting thresholds and rules
+│
+├── api_docs/                                    # API documentation
+│   ├── swagger/                                 # Swagger (OpenAPI) files for API documentation
+│   │   ├── swagger_config.yml                   # Swagger UI configuration
+│   │   └── source_api_spec.yml                  # OpenAPI specification for SOURCE APIs
+│   └── redoc/                                   # ReDoc files for API documentation
+│       └── redoc_static_files/                  # Static files for serving ReDoc documentation
+│
+├── monitoring/                                  # Monitoring and analytics for APIs
+│   ├── dashboard.json                           # Monitoring dashboard configuration
+│   └── analytics_connector.py                   # Connector script for API analytics data
+│
+├── tests/                                       # Tests for API management components
+│   ├── test_api_gateway.py                      # Tests for API gateway configuration
+│   ├── test_authentication.py                   # Tests for authentication mechanisms
+│   └── test_rate_limiting.py                    # Tests for rate limiting functionality
+│
+├── scripts/                                     # Operational scripts for managing APIs
+│   ├── deploy_api_definitions.sh                # Script to deploy API definitions to the gateway
+│   └── update_api_docs.sh                       # Script to update API documentation
+│
+├── security/                                    # Security policies and configurations
+│   ├── api_security_best_practices.md           # Best practices for API security
+│   └── security_scan.py                         # Script to perform security scans on API endpoints
+│
+└── documentation/                               # Documentation for API management
+    ├── api_management_guide.md                  # Guide on managing APIs within SOURCE
+    └── api_development_standards.md             # Standards for developing APIs for SOURCE
